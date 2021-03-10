@@ -24,5 +24,3 @@ instock FROM products";
  }
  }
 ?>
- 
-
