@@ -1,0 +1,23 @@
+apiVersion: v1
+data:
+  database.name: mydatabase
+  database.svc: mariadb1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2021-03-10T11:31:07Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:database.name: {}
+        f:database.svc: {}
+    manager: Mozilla
+    operation: Update
+    time: "2021-03-10T11:31:07Z"
+  name: php-variable
+  namespace: php-maria
+  resourceVersion: "411730"
+  selfLink: /api/v1/namespaces/php-maria/configmaps/php-variable
+  uid: 31103fe9-f5dd-4068-abf3-50edc029825c
