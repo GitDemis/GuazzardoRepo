@@ -1,5 +1,6 @@
 <?php
- $mysqli = new mysqli( mariadb1 , 'root', 'master', 'mydatabase');
+ $ip=getenv('MARIADB1_PORT');
+ $mysqli = new mysqli( $ip , 'root', 'master', 'mydatabase');
  // If an error occurs when establishing the connection
  if ($mysqli->connect_errno) {
  // We can show a message:
