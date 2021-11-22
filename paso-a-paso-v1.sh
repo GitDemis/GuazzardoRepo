@@ -6,7 +6,7 @@ kubectl create -f mariadb.yaml
 
 sleep 10
 
-bash mariadb-secretes/forward-pod-mariadb.sh
+#bash mariadb-secretes/forward-pod-mariadb.sh
 
 sleep 10 && echo "espere mientras populamos"
 
@@ -19,6 +19,9 @@ apt -y install mysql-client-core-5.7
 bash comandos-k8s.sh
 
 sleep 10
+
+bash mariadb-secretes/forward-pod-mariadb.sh
+
 
 mysql -uroot -pmaster -h 127.0.0.1 < db.sql
 
