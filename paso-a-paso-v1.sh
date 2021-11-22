@@ -1,6 +1,6 @@
 # Creo el servicio y el port-forward
 
-kubectl create -f mariadb-secretes/mariadb.yaml
+kubectl create -f mariadb.yaml
 
 sleep 5
 
