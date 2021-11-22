@@ -1,10 +1,14 @@
 # Creo el servicio y el port-forward
+kubectl create ns base
+kubens base
 
-kubectl create -f mariadb-secretes/mariadb.yaml
+kubectl create -f mariadb.yaml
 
-sleep 5
+sleep 10
 
 bash mariadb-secretes/forward-pod-mariadb.sh
+
+sleep 10 && echo "espere mientras populamos"
 
 #populo la base
 
@@ -14,6 +18,8 @@ apt -y install mysql-client-core-5.7
 
 bash comandos-k8s.sh
 
-sleep 5
+sleep 10
 
 mysql -uroot -pmaster -h 127.0.0.1 < db.sql
+
+kubectl get svc
