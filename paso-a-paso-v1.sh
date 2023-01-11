@@ -16,6 +16,9 @@ apt -y install mysql-client-core-5.7
 
 #Creo el frontend
 
+#Para eks, acordarse de cambiar el NodePort por LoadBalancer
+# <ip>/page.php
+
 bash comandos-k8s.sh
 
 sleep 10
